@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app="store">
+<head>
+<meta charset="utf-8"/>
+
+<!-- css   -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- js -->
+
+<!--<script type="text/javascript" src="bower_components/angular/angular.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+<script type="text/javascript" src="js/app.js"> </script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+
+
+
+<title> Online Shop</title>
+
+</head>
+
+<body  ng-controller="StoreController as store">
+
+<h1> Flatlander Crafted Gems</h1>
+<h3> - an Angular Store - </h3>
+
+
+		<ul class="list-group">
+			<li class="list-group-item"  ng-repeat="product in store.products"> <!--store alias name  -->
+				
+				<h3> {{product.name}}</h3>
+				<em class="pull-right"> {{product.price|currency}} </em>
+			    <div class = "img-wrap">
+				 	<img ng-src="{{product.images[0].full}}"/> 
+			    </div>
+
+			    <section>
+			    	<ul class="nav nav-pills">
+			    		
+			    		<li> <a href ng-click="tab = 1" >  Description  </a></li>
+			    		
+			    		<li> <a href ng-click="tab = 2" > Specifications  </a></li>
+			    		
+			    		<li> <a href ng-click="tab =3" > Reviews  </a> </li>
+
+			    	</ul>
+
+			    	{{tab}}
+
+			    </section>
+ 
+			    
+
+
+
+
+
+			</li>
+		</ul>
+
+ </body>
+</html>

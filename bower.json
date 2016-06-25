@@ -1,0 +1,14 @@
+{
+  "name": "lesson1Example",
+  "authors": [
+    "cmbreki <cbreki@hotmail.gr>"
+  ],
+  "description": "a lesson project",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "angular": "1.5.7",
+    "bootstrap": "^3.3.6"
+  }
+}
