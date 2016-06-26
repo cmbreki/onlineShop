@@ -52,8 +52,23 @@ var gems = [
 		
 
 		],
+		reviews:[
+          
+          {
+          	stars:5,
+          	body: "I love the product!",
+          	author: "joe@thomas.gr"
 
-		
+          },
+          {
+          	stars:1,
+          	body: "This product sucks",
+          	author:"time@hater.com"
+
+          }
+
+		],
+
 
 	},
 	
@@ -76,8 +91,25 @@ var gems = [
 				full:'img/pentagonal.png',
 				thumb:'img/pentagonal.png'
 			},
-		
 		],
+		reviews:[
+
+{
+          	stars:5,
+          	body: "I love the product!",
+          	author: "joe@thomas.gr"
+
+          },
+          {
+          	stars:1,
+          	body: "This product sucks",
+          	author:"time@hater.com"
+
+          }
+
+		],
+		
+		
 	},
 	
 
