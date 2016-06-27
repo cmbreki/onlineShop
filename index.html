@@ -16,9 +16,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 
-
-
-
 <title> Online Shop</title>
 
 </head>
@@ -64,7 +61,23 @@
 					</div>
 					<div class="panel" ng-show="panel.isSelected(3)">
 				    	<h4> Reviews </h4>
-				    	<blockquote>None yet</blockquote>
+				    	<blockquote >
+				    		<b> Stars: {{review.stars}} </b>
+				    		{{review.body}}
+				    		<cite>by: {{review.author}} </cite>
+				    	</blockquote>
+
+
+				    	<form name="reviewForm">
+					    	<select ng-model="review.stars">
+					    		<option value="1">1 star</option>
+					    		<option value="2">2 stars</option>
+					    	</select>
+					    	<textarea ng-model="review.body"></textarea>
+					    	<label>by:</label>
+					    	<input ng-model="review.author" type="email" />
+					    	<input type="submit" value="Submit" />
+				    	</form>
 					</div>
 			    	
 
@@ -73,17 +86,6 @@
 			</li>
 		</ul>
 
-
-	<div ng-controller="WeatherController as vm">
-
-	  	<h2>{{vm.data.city.id}}</h2>
-	  	<h2>{{vm.data.list[0].weather[0].icon}}</h2>
-     
-         <h4>  <span>{{(vm.data.list[0].dt) * 1000 | date:'mediumDate'}}</span><br></h4>
-
-         <img src="http://openweathermap.org/img/w/{{vm.data.list[1].weather[0].icon}}.png">
-
-	</div>
 
  </body>
 </html>
