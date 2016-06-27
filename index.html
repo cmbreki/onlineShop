@@ -16,9 +16,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 
-
-
-
 <title> Online Shop</title>
 
 </head>
@@ -64,7 +61,23 @@
 					</div>
 					<div class="panel" ng-show="panel.isSelected(3)">
 				    	<h4> Reviews </h4>
-				    	<blockquote>None yet</blockquote>
+				    	<blockquote >
+				    		<b> Stars: {{reviewCtrl.review.stars}} </b>
+				    		{{reviewCtrl.review.body}}
+				    		<cite>by: {{reviewCtrl.review.author}} </cite>
+				    	</blockquote>
+
+      <!-- note: ng-submit allow us to call a function when the form is submitted-->
+				    	<form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(product)">
+					    	<select ng-model="reviewCtrl.review.stars">
+					    		<option value="1">1 star</option>
+					    		<option value="2">2 stars</option>
+					    	</select>
+					    	<textarea ng-model="reviewCtrl.review.body"></textarea>
+					    	<label>by:</label>
+					    	<input ng-model="reviewCtrl.review.author" type="email" />
+					    	<input type="submit" value="Submit" />
+				    	</form>
 					</div>
 			    	
 
@@ -72,6 +85,7 @@
 
 			</li>
 		</ul>
+
 
  </body>
 </html>
